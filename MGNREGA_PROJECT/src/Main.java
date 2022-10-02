@@ -4,8 +4,10 @@ import com.manrega.dao.ProjectDao;
 import com.manrega.dao.ProjectDaoimpl;
 import com.manrega.usecase.AddGpm;
 import com.manrega.usecase.CreateProject;
-import com.manrega.usecase.Find;
+//import com.manrega.usecase.Find;
+import com.manrega.usecase.FindEmp;
 import com.manrega.usecase.GpmLogin;
+import com.manrega.usecase.TotalPay;
 import com.manrega.usecase.ViewGPM;
 import com.manrega.usecase.ViewProjects;
 
@@ -20,7 +22,8 @@ public class Main {
 		AddGpm a = new AddGpm();
 		ViewGPM av = new ViewGPM();
 		GpmLogin ll  = new GpmLogin();
-		Find ff = new Find();
+		FindEmp ff = new FindEmp();
+		TotalPay tt = new TotalPay();
 		boolean check = false;
 		
 		while(true)
@@ -124,9 +127,8 @@ public class Main {
 					 while(true)
 					 {
 						    System.out.print("\t**********************************************************************************************\n");
-			    	        System.out.print("\t*                  1. Show No. of Employee                                                                          *\n");
-			    	        
-			    	        System.out.print("\t*                  2. Total Salary                                                           *\n");
+			    	        System.out.print("\t*                  1. Show No. of Employee                                                   *\n");
+			    	        System.out.print("\t*                  2. Total Amount Will Pay Daily                                            *\n");
 			    	        System.out.print("\t*                  3. LOGOUT                                                                 *\n");
 			    	        System.out.print("\t**********************************************************************************************\n");	
 			    			int ch=sc.nextInt();
@@ -137,14 +139,14 @@ public class Main {
 		    				{
 		    					/*To Create new Project*/
 		    					
-		    					ll.checks(ch);
+		    					ff.main(null);
 		    					
 		    					break;
 		    				}
 		    				case 2:
 		    				{
 		    					/*To view all Project Detail*/
-		    					ll.total(ch);
+		    					tt.main(null);
 		    					
 		    					
 		    					break;

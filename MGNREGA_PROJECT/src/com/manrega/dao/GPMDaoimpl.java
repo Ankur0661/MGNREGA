@@ -126,41 +126,6 @@ public class GPMDaoimpl implements GPMDao{
 		return gpm;
 	}
 
-	@Override
-	public GPM NoEmp(String email) {
-		
-		GPM gpm = null;
-		
-		try(Connection conn = Mutility.provideConnection()){
-			
-			
-			PreparedStatement ps= conn.prepareStatement("select gEmp from gpmm where email = ?");
-			
-			ps.setString(1, email);
-			
-			ResultSet rs= ps.executeQuery();
-			
-			if(rs.next()) {
-				int i = rs.getInt("gpm_id");
-				String n = rs.getString("gName");
-				int w = rs.getInt("gWard");
-				int en = rs.getInt("gEmp");
-				String e = rs.getString("email");
-				String p = rs.getString("password");
-				int kk = rs.getInt("poid");
-				
-				gpm = new GPM(i, n, w, en, e, p, kk);
-			}
-			
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-		
-		return gpm;
-	}
+	
 
 }
