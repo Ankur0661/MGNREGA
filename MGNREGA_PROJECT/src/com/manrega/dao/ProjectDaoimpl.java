@@ -65,7 +65,7 @@ public class ProjectDaoimpl implements ProjectDao {
 		
 		try(Connection conn = Mutility.provideConnection()){
 			
-			PreparedStatement ps= conn.prepareStatement("select * from Project");
+			PreparedStatement ps= conn.prepareStatement("select * from Projects");
 			
 			ResultSet rs= ps.executeQuery();
 			

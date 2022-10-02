@@ -15,6 +15,6 @@ public interface GPMDao {
 	
 	public GPM login(String email, String psw) throws GPMException;
 	
-	public GPM NoEmp(String email)throws GPMException;
+	
 
 }

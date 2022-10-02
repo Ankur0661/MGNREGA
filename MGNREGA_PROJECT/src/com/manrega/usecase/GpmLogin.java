@@ -27,8 +27,7 @@ public class GpmLogin {
 		try {
 			GPM gpm = dao.login(uname, pass);
 			
-			checks(gpm.getgEmp());
-			total(gpm.getgEmp());
+			
 			
 			flag = true;
 			
@@ -45,20 +44,7 @@ public class GpmLogin {
 
 	}
 	
-	public static void checks(int n) {
-		if(n>0) {
-			System.out.println("No. Of Employee is : "+ n);
-			
-		}
-		
-	}
-	public static void total(int x) {
-		if(x>0) {
-			System.out.println("Total Salary of Employee is : "+ x*350);
-			
-		}
-		
-	}
+	
 	
 
 }
